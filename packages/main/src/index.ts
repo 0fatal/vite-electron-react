@@ -1,6 +1,6 @@
 import { app } from 'electron';
 import './security-restrictions';
-import { restoreOrCreateWindow } from '/@/mainWindow';
+import { restoreOrCreateWindow } from '@/mainWindow';
 
 /**
  * Prevent multiple instances
@@ -46,11 +46,6 @@ if (import.meta.env.DEV) {
   app
     .whenReady()
     .then(() => import('electron-devtools-installer'))
-    // .then(({default: installExtension, VUEJS3_DEVTOOLS}) => installExtension(VUEJS3_DEVTOOLS, {
-    //   loadExtensionOptions: {
-    //     allowFileAccess: true,
-    //   },
-    // }))
     .catch((e) => console.error('Failed install extension:', e));
 }
 
